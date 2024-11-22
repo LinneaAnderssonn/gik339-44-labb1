@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupp 44</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Labb 1 - Grupp 44 </h1>
     
+    <!-- Input-element med labels -->
+    <form>
+        <label for="color">Färg</label>
+        <input type="text" name="color" id="color" class="textfield">
+
+        <label for="content">Innehåll</label>
+        <input type="text" name="content" id="content" class="textfield">
+
+        <label for="divStyle">
+            <input type="checkbox" name="divStyle" id="divStyle" class="checkbox">
+            Stil på box
+        </label>
+    </form>
+
+    <!-- Button -->
+    <button id="actionButton" class="button">Ta Bort</button>
+
+    <!-- Div-element -->
+    <div id="outputDiv" class="output-div">Test test</div>
+    
+    <!-- JavaScript-fil -->
     <script src="script.js"></script>
 </body>
 </html>
