@@ -1,4 +1,4 @@
-//Skapar variabler (uppgift 4)
+//Skapar variabler (uppgift 4))
 // Skapar en variabel checkbox och hämtar via dess id
 const checkbox = document.querySelector("#divStyle") 
 // Skapar en variabel textFields som hämtar alla textfält via klassnamn
