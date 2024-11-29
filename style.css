@@ -8,7 +8,7 @@ h1 {
 
 /* Grundläggande stil för formuläret */
 form.box {
-    display: flex;
+    display:flex;
     flex-direction: column; /* Lägg varje rad vertikalt */
     align-items: flex-start; /* Justera allt till vänster */
     gap: 15px; /* Mellanrum mellan rader */
