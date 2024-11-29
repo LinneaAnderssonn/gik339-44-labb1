@@ -8,26 +8,33 @@
 </head>
 <body>
     <h1>Labb 1 - Grupp 44 </h1>
-    
-    <!-- Input-element med labels -->
-    <form>
-        <label for="color">Färg</label>
-        <input type="text" name="color" id="color" class="textfield">
+        
+            <!-- Input-element med labels -->
+                <form class="box">
+                    <!-- Denna gruperar färg och tillhörande textfält -->
+                    <div class="form-group">
+                        <label for="color">Färg</label>
+                        <input type="text" name="color" id="color" class="textfield">
+                    </div>
+                    <!-- Denna gruperar innehåll och tillhörande textfält -->
+                    <div class="form-group">
+                        <label for="content">Innehåll</label>
+                        <input type="text" name="content" id="content" class="textfield">
+                    </div>
+                    <!-- Denna gruperar "stil på box" och box -->
+                    <div class="form-group">
+                        <label for="divStyle">Stil på box</label>
+                        <input type="checkbox" name="divStyle" id="divStyle" class="checkbox">
+                    </div>
+                
 
-        <label for="content">Innehåll</label>
-        <input type="text" name="content" id="content" class="textfield">
+                    <!-- Button -->
+                    <button id="actionButton" class="button">Ta Bort</button>
 
-        <label for="divStyle">
-            <input type="checkbox" name="divStyle" id="divStyle" class="checkbox">
-            Stil på box
-        </label>
-    </form>
-
-    <!-- Button -->
-    <button id="actionButton" class="button">Ta Bort</button>
-
-    <!-- Div-element -->
-    <div id="outputDiv" class="output-div">Test test</div>
+                    <!-- Div-element -->
+                    <div id="outputDiv" class="output-div">Test test, denna ska tas bort sen</div>
+                </form>
+  
     
     <!-- JavaScript-fil -->
     <script src="script.js"></script>
