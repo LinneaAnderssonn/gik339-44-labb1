@@ -1,24 +1,29 @@
-
-// Hämtar det som står i textfältet för färg genom id
-const colorInput = document.getElementById("color");
-
 // Skapar en variabel checkbox och hämtar via dess id
 const checkbox = document.querySelector("#divStyle") 
-
 // Skapar en variabel textFields som hämtar alla textfält via klassnamn
 const textFields = document.getElementsByClassName("textfield");
-
 // OBS ANVÄNDS EJ ÄNNU Skapar en variabel button och hämtar via dess id
 const button = document.getElementById("actionButton");
 
+// Skapar en variabel outputDiv och hämtar via dess id 
+const divElement = document.getElementById("outputDiv");
+
+
+
+
+//const divElement = document.getElementsByTagName("div")[3];
+
+
+
+// Hämtar det som står i textfältet för färg genom id
+//const colorInput = document.getElementById("color");
+
 // OBS ANVÄNDS EJ ÄNNU Skapar en variabel divElement och hämtar via tag-namn (0=första elementet)
-const divElement = document.getElementsByTagName("div")[0];
-
+//const divElement = document.getElementsByTagName("div")[0];
 // OBS ANVÄNDS EJ ÄNNU Skapar en variabel contentInput och hämtar via dess id
-const contentInput = document.getElementById("content");
+//const contentInput = document.getElementById("content");
 
-// Skapar en variabel outputDiv och hämtar via dess id
-const outputDiv = document.getElementById("outputDiv");
+
 
 // Kontrollera att variablerna är hämtade korrekt (för felsökning)
 console.log("Checkbox:", checkbox);
@@ -38,7 +43,7 @@ function handleTextFieldEvent(e) {
     // Om name-attributet är "content", uppdatera div-elementet
     if (fieldName === "content") {
         const fieldValue = e.target.value.trim(); // Hämta och trimma värdet
-        outputDiv.innerHTML = fieldValue || "Test test, denna ska tas bort sen"; 
+        divElement.innerHTML = fieldValue || "Test test, denna ska tas bort sen"; 
     }
 }
 
@@ -46,20 +51,20 @@ function handleTextFieldEvent(e) {
 // Lägg till en anonym lyssnare till checkbox (uppgift 6)
 checkbox.addEventListener("change", () => {
     // När värdet ändras hämtas den nya färgen och lagras i en lokal variabel
-    const colorValue = colorInput.value.trim();
+    const colorValue = textFields[0].value.trim();
     if (checkbox.checked) {
         if (colorValue) {
             // Om fältet har ett värde, ändra bakgrundsfärgen
-            outputDiv.style.backgroundColor = colorValue;
+            divElement.style.backgroundColor = colorValue;
             console.log(`Checkbox markerad: Bakgrundsfärgen ändrades till: ${colorValue}`);
         } else {
             // Om fältet är tomt, återställ bakgrundsfärgen
-            outputDiv.style.backgroundColor = ""; 
+            divElement.style.backgroundColor = ""; 
             console.log("Checkbox markerad men inget färgvärde angivet. Bakgrundsfärgen återställd.");
         }
     } else {
         // Återställ till den ursprungliga bakgrundsfärgen om checkboxen är avmarkerad
-        outputDiv.style.backgroundColor = ""; 
+        divElement.style.backgroundColor = ""; 
         console.log("Checkbox avmarkerad: Bakgrundsfärgen återställd till ursprungligt läge.");
     }
 });
@@ -67,10 +72,14 @@ checkbox.addEventListener("change", () => {
 
 // Koppla eventlyssnare till varje textfält (uppgift 6 tillsammans med 5)
 Array.from(textFields).forEach(field => {
-    field.addEventListener("input", handleTextFieldEvent); // Använd funktionen från uppgift 5
+    field.addEventListener("blur", handleTextFieldEvent); // Använd funktionen från uppgift 5
 });
 
 
 
-
+button.addEventListener("click", () =>{
+    preventDefault();
+    divElement.remove();
+}
+);
 

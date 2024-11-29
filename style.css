@@ -22,7 +22,7 @@ form.box {
 .form-group {
     display: flex; /* Flexbox för att placera label och input på samma rad */
     align-items: center; /* Vertikal centrering */
-    gap: 10px; /* Mellanrum mellan label och input */
+    gap: 15px; /* Mellanrum mellan label och input */
     width: 100%; /* Gör raderna lika breda */
 }
 
