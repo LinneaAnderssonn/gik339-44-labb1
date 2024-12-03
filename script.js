@@ -1,34 +1,39 @@
-//Skapar variabler (uppgift 4))
-// Skapar en variabel checkbox och hämtar via dess id
-const checkbox = document.querySelector("#divStyle") 
-// Skapar en variabel textFields som hämtar alla textfält via klassnamn
-const textFields = document.getElementsByClassName("textfield");
+//Skapar variabler (uppgift 4)
 // Skapar en variabel button och hämtar via dess id
 const button = document.getElementById("actionButton");
 // Skapar en variabel outputDiv och hämtar via dess id 
 const divElement = document.getElementById("outputDiv");
-
+// Skapar en variabel checkbox och hämtar via dess id
+const checkbox = document.querySelector("#divStyle") 
+// Skapar en variabel textFields som hämtar alla textfält via klassnamn
+const textFields = document.getElementsByClassName("textfield");
 
 
 // Fördefinerad funktion (uppgift 5)
-// e tar emot ett event
+// e är eventet-objektet som skickas till funktionen när eventet triggas
 function handleTextFieldEvent(e) { 
-    // e.taget är den som triggade eventet och det skrivs här ut i konsolen
+    // Skriver ut i konsollen vilket HTML-element som utlöste eventet
     console.log("Avsändare (target):", e.target);
     // Hämta namnet på elementet och spar till variabeln fieldName
     const fieldName = e.target.name;
-    //Skriver ut i konsolen
+    //Skriver ut name-attributet i konsolen 
     console.log("Name-attribut:", fieldName);
-    // Om name-attributet är "content", uppdatera div-elementet
+    // Om name-attributet är "content", uppdateras div-elementet
     if (fieldName === "content") {
         const fieldValue = e.target.value.trim(); // Hämta och trimma värdet
+        // Uppdaterar innehållet i divElement med värdet från fieldValue.
+        // Om fieldValue är tomt, sätts en tom sträng som innehåll istället.
         divElement.innerHTML = fieldValue || ""; 
     }
 }
 
 // Koppla eventlyssnare till varje textfält (uppgift 6 tillsammans med 5)
+// Konverterar textfälten till en array för att möjliggöra iteration över dem
 Array.from(textFields).forEach(field => {
-    field.addEventListener("input", handleTextFieldEvent); // Använd funktionen från uppgift 5
+    // Lägger till en eventlyssnare på varje textfält för "input"-event
+    field.addEventListener("input", handleTextFieldEvent); 
+    // Input-eventet triggas när någon ändrar innehållet i någon av textfälten
+    // där den fördefinerade funktionen hanterar vad som ska hända
 });
 
 // Lägg till en anonym lyssnare till checkbox (uppgift 6)
