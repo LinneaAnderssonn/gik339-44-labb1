@@ -9,60 +9,60 @@ h1 {
 /* Grundläggande stil för formuläret */
 form.box {
     display: flex;
-    flex-direction: column; /* Lägg varje rad vertikalt */
-    align-items: flex-start; /* Justera allt till vänster */
-    gap: 0.9rem; /* Mellanrum mellan rader */
-    max-width: 25rem; /* Begränsa bredden på formuläret (400px) */
-    margin: 0 auto; /* Centrera formuläret */
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 0.9rem; 
+    max-width: 25rem; 
+    margin: 0 auto; 
     background-color: grey;
-    padding: 0.6rem; /* Inre marginal */
+    padding: 0.6rem; 
 }
 
 /* Styling för varje rad i formuläret */
 .form-group {
-    display: flex; /* Flexbox för att placera label och input på samma rad */
-    align-items: center; /* Vertikal centrering */
-    gap: 0.9rem; /* Mellanrum mellan label och input */
-    width: 100%; /* Gör raderna lika breda */
+    display: flex; 
+    align-items: center; 
+    gap: 0.9rem; 
+    width: 100%; 
 }
 
 /* Styling för labels */
 label {
-    width: 7.5rem; /* Samma bredd för alla labels */
-    text-align: left; /* Justera texten till vänster */
+    width: 7.5rem; 
+    text-align: left; 
 }
 
 /* Styling för textfält */
 input[type="text"] {
-    flex: 1; /* Gör textfälten flexibla */
-    padding: 0.3rem; /* Inre marginal */
-    border: 0.1rem solid #ccc; /* Grå kantlinje */
-    border-radius: 0.3rem; /* Rundade hörn */
-    font-size: 0.9rem; /* Textstorlek */
+    flex: 1; 
+    padding: 0.3rem; 
+    border: 0.1rem solid #ccc; 
+    border-radius: 0.3rem; 
+    font-size: 0.9rem; 
 }
 
 /* Styling för checkbox */
 input[type="checkbox"] {
-    margin-left: 0; /* Ta bort onödig marginal till vänster */
+    margin-left: 0; 
 }
 
 /* Styling för knappen */
 button {
-    align-self: flex-start; /* Placera knappen längst till vänster */
-    padding: 0.6rem 1.3rem; /* Lägg till marginaler runt texten */
-    background-color: darkgrey; /* Grå bakgrund */
-    color: white; /* Vit text */
-    border: none; /* Ingen kantlinje */
-    border-radius: 0.3rem; /* Rundade hörn */
-    cursor: pointer; /* Handpekare */
+    align-self: flex-start; 
+    padding: 0.6rem 1.3rem; 
+    background-color: darkgrey; 
+    color: white; 
+    border: none; 
+    border-radius: 0.3rem; 
+    cursor: pointer; 
 }
 
 /* Styling för output-div */
 #outputDiv {
-    border: 0.1rem solid #ccc; /* Grå kantlinje (1px) */
-    background-color: #f9f9f9; /* Ljus bakgrund */
-    border-radius: 0.3rem; /* Rundade hörn */
-    min-height: 2.5rem; /* Minimumhöjd */
-    width: 100%; /* Lika bred som formuläret */
+    border: 0.1rem solid #ccc; 
+    background-color: #f9f9f9; 
+    border-radius: 0.3rem; 
+    min-height: 2.5rem; 
+    width: 100%; 
     background-color: grey;
 }
